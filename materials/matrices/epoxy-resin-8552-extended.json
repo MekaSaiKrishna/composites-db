@@ -162,7 +162,7 @@
     "material_name": "EpoxyResin_8552",
     "template": "*Material, name=EpoxyResin_8552\n*Elastic\n4620., 0.39\n*Density\n1.30e-09,\n*Expansion\n6.5e-05, 298.\n*Conductivity\n0.19, 298.\n*Specific Heat\n1.1e+09,",
     "cure_kinetics_template": "** 8552 Cure Kinetics Parameters (Equation 6.13)\n** Activation Energy: 66.5 kJ/gmole\n** Pre-exponential coefficient: 1.53e5 /s\n** m = 0.813, n = 2.74\n** Diffusion constant C = 43.1\n** Critical degree of cure: αc = -1.684 + 5.475e-3*T",
-    "modulus_development_template": "** 8552 Resin Modulus Development Model (Equation 6.6)\n** Unrelaxed modulus: Er∞ = 4.67 GPa\n** Relaxed modulus: Er0 = 4.67 GPa\n** Glass transition (α=0): Tg0 = 268 K (-5°C)\n** Tg variation: αTg = 220 K\n** Critical temperatures: TCla = -45.7 K, TC2 = -12 K"
+    "modulus_development_template": "** 8552 Resin Modulus Development Model (Equation 6.6)\n** Unrelaxed modulus: Er∞ = 4.67 GPa\n** Relaxed modulus: Er0 = 4.67 MPa\n** Glass transition (α=0): Tg0 = 268 K (-5°C)\n** Tg variation: αTg = 220 K\n** Critical temperatures: TCla = -45.7 K, TC2 = -12 K"
   },
   "processing": {
     "storageTemp": {

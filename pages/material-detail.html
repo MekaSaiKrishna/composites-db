@@ -53,7 +53,7 @@
 
         <!-- Quick Actions -->
         <section class="quick-actions">
-            <button class="action-btn primary" onclick="copyAllAbaqus()">
+            <button class="action-btn primary" onclick="copyAllAbaqus(event)">
                 📋 Copy ABAQUS Code
             </button>
             <button class="action-btn secondary" onclick="exportMaterialJSON()">
@@ -87,6 +87,14 @@
             <section class="property-card" id="rheological-section" style="display: none;">
                 <h2>Rheological Properties</h2>
                 <div class="property-table" id="rheological-properties">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Cure Kinetics Parameters (if applicable) -->
+            <section class="property-card" id="cure-kinetics-section" style="display: none;">
+                <h2>Cure Kinetics Parameters</h2>
+                <div class="property-table" id="cure-kinetics-properties">
                     <!-- Populated by JavaScript -->
                 </div>
             </section>
@@ -131,7 +139,7 @@
         <section class="abaqus-code-section">
             <h2>ABAQUS Material Definition</h2>
             <div class="code-container">
-                <button class="copy-code-btn" onclick="copyAbaqusCode()">📋 Copy Code</button>
+                <button class="copy-code-btn" onclick="copyAbaqusCode(event)">📋 Copy Code</button>
                 <pre id="abaqus-code"><code>Loading...</code></pre>
             </div>
         </section>

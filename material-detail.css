@@ -208,10 +208,23 @@
     transform: translateX(5px);
 }
 
+.property-label-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    flex: 1;
+    min-width: 0;
+}
+
 .property-label {
     font-size: 1rem;
     color: var(--text-secondary);
-    flex: 1;
+}
+
+.property-notes {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.35);
+    line-height: 1.4;
 }
 
 .property-value {
@@ -219,6 +232,8 @@
     font-weight: 600;
     color: var(--text-primary);
     text-align: right;
+    flex-shrink: 0;
+    margin-left: 1rem;
 }
 
 /* Visualization Section */
