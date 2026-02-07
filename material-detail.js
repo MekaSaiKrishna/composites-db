@@ -80,24 +80,34 @@ function populatePage(material) {
     // Populate thermal properties
     populatePropertySection('thermal-properties', material.thermal);
 
-    // Populate cure kinetics properties
-    populatePropertySection('Cure Kinetics Parameters', material.cure_kinetics);
-    
     // Populate rheological properties if available
-    // if (material.rheological) {
-    //     document.getElementById('rheological-section').style.display = 'block';
-    //     populatePropertySection('rheological-properties', material.rheological);
-    // }
-    
+    if (material.rheological) {
+        document.getElementById('rheological-section').style.display = 'block';
+        populatePropertySection('rheological-properties', material.rheological);
+    }
+
+    // Populate cure kinetics if available
+    if (material.cure_kinetics) {
+        document.getElementById('cure-kinetics-section').style.display = 'block';
+        populatePropertySection('cure-kinetics-properties', material.cure_kinetics);
+    }
+
     // Populate processing parameters if available
     if (material.processing) {
         document.getElementById('processing-section').style.display = 'block';
         populatePropertySection('processing-properties', material.processing);
     }
-    
-    // Populate ABAQUS code
+
+    // Populate ABAQUS code (include all available templates)
     if (material.abaqus && material.abaqus.template) {
-        document.getElementById('abaqus-code').textContent = material.abaqus.template;
+        let abaqusCode = material.abaqus.template;
+        if (material.abaqus.cure_kinetics_template) {
+            abaqusCode += '\n\n' + material.abaqus.cure_kinetics_template;
+        }
+        if (material.abaqus.modulus_development_template) {
+            abaqusCode += '\n\n' + material.abaqus.modulus_development_template;
+        }
+        document.getElementById('abaqus-code').textContent = abaqusCode;
     }
     
     // Populate references if available
@@ -120,13 +130,19 @@ function populatePage(material) {
 function populatePropertySection(sectionId, properties) {
     const section = document.getElementById(sectionId);
     if (!section || !properties) return;
-    
+
     section.innerHTML = Object.entries(properties)
         .map(([key, prop]) => {
             const displayValue = prop.display_value || `${prop.value} ${prop.unit}`;
+            const notesHtml = prop.notes
+                ? `<span class="property-notes">${prop.notes}</span>`
+                : '';
             return `
                 <div class="property-row">
-                    <span class="property-label">${prop.label}</span>
+                    <div class="property-label-group">
+                        <span class="property-label">${prop.label}</span>
+                        ${notesHtml}
+                    </div>
                     <span class="property-value">${displayValue}</span>
                 </div>
             `;
@@ -135,16 +151,16 @@ function populatePropertySection(sectionId, properties) {
 }
 
 // Copy ABAQUS code to clipboard
-function copyAbaqusCode() {
+function copyAbaqusCode(e) {
     const codeElement = document.getElementById('abaqus-code');
     const textToCopy = codeElement.textContent;
-    
+
     navigator.clipboard.writeText(textToCopy).then(() => {
-        const btn = event.target;
+        const btn = e ? e.currentTarget : document.querySelector('.copy-code-btn');
         const originalText = btn.textContent;
         btn.textContent = '✓ Copied!';
         btn.style.background = 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)';
-        
+
         setTimeout(() => {
             btn.textContent = originalText;
             btn.style.background = '';
@@ -156,8 +172,8 @@ function copyAbaqusCode() {
 }
 
 // Copy all ABAQUS code
-function copyAllAbaqus() {
-    copyAbaqusCode();
+function copyAllAbaqus(e) {
+    copyAbaqusCode(e);
 }
 
 // Export material as JSON
