@@ -110,7 +110,7 @@
   },
   "abaqus": {
     "material_name": "CarbonFiber_T700",
-    "template": "*Material, name=CarbonFiber_T700\n*Elastic, type=ENGINEERING CONSTANTS\n230000., 15000., 15000., 0.20, 0.25, 0.25, 27000., 7000.\n7000., 298.\n*Density\n1.80e-09,\n*Expansion, type=ORTHO\n-5.0e-07, 1.0e-05, 1.0e-05, 298.\n*Conductivity, type=ORTHO\n9.0, 0.6, 0.6, 298.\n*Specific Heat\n7.1e+08,"
+    "template": "*Material, name=CarbonFiber_T700\n*Elastic, type=ENGINEERING CONSTANTS\n230000., 15000., 15000., 0.20, 0.20, 0.25, 27000., 27000.\n7000., 298.\n*Density\n1.80e-09,\n*Expansion, type=ORTHO\n-5.0e-07, 1.0e-05, 1.0e-05, 298.\n*Conductivity, type=ORTHO\n9.0, 0.6, 0.6, 298.\n*Specific Heat\n7.1e+08,"
   },
   "references": [
     "Toray Carbon Fibers America, Inc. Technical Data Sheet T700S",
