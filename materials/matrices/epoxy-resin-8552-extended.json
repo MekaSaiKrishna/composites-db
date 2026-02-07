@@ -1,0 +1,191 @@
+{
+  "id": "epoxy-resin-8552",
+  "name": "Epoxy Resin 8552",
+  "type": "Matrix",
+  "manufacturer": "Hexcel",
+  "image": "images/materials/epoxy-resin-8552.jpg"
+  "description": "Toughened epoxy resin system for prepreg applications, aerospace grade. 8552 offers excellent damage tolerance and hot/wet performance for primary aircraft structures.",
+  "detailed_description": "Hexcel 8552 is a high-performance toughened epoxy matrix system specifically designed for aerospace prepreg applications. It represents a significant advancement in epoxy technology, offering exceptional damage tolerance while maintaining the high-temperature performance required for aircraft primary structures.\n\n**Toughening Technology**: The 8552 system incorporates advanced toughening agents that significantly improve resistance to impact damage and delamination. Interlaminar fracture toughness (GIc) is 2-3 times higher than earlier generation aerospace epoxies, resulting in better damage tolerance and longer service life.\n\n**Hot/Wet Performance**: Maintains excellent mechanical properties at elevated temperatures, even after moisture absorption. The glass transition temperature (Tg) of 190°C provides adequate margin for typical aircraft operating conditions. Retains over 70% of room temperature strength at 82°C wet conditions (FAA certification standard).\n\n**Processing Characteristics**: Designed for autoclave processing with standard aerospace cure cycles. Exhibits controlled viscosity during cure, enabling good fiber wet-out and minimal void content. The resin demonstrates excellent tack and drape for hand layup operations while maintaining sufficient shelf life for manufacturing flexibility.\n\n**Qualification Status**: Widely qualified by major aerospace OEMs including Boeing, Airbus, Lockheed Martin, and Northrop Grumman. Extensive material property databases available for design and certification. Used in numerous certified aircraft programs.\n\n**Applications**: Aircraft primary structures (wing skins, spars, fuselage panels), helicopter rotor blades, aerospace tooling, satellite structures, and other applications requiring high reliability and damage tolerance.\n\n**Handling Requirements**: Requires freezer storage at -18°C. Out-life at room temperature is 21 days. Cured parts typically require post-cure at 190°C for 2 hours to develop full properties.",
+  "mechanical": {
+    "E_unrelaxed": {
+      "value": 4.67e9,
+      "unit": "Pa",
+      "label": "Er∞ (Unrelaxed Resin Modulus)",
+      "display_value": "4670 MPa",
+      "notes": "Resin modulus at t = 0 (or T << Tg) and T = 20°C"
+    },
+    "E_relaxed": {
+      "value": 4.67e6,
+      "unit": "Pa",
+      "label": "Er0 (Relaxed Resin Modulus)",
+      "display_value": "4.67 MPa",
+      "notes": "Resin modulus at t = ∞ (or T >> Tg) and T = 20°C. Arbitrarily chosen, high function of degree of cure."
+    },
+    "v_g": {
+      "value": 0.37,
+      "unit": "",
+      "label": "ν (Poisson's Ratio) in glassy state"
+    },
+    "density": {
+      "value": 1.30e-9,
+      "unit": "tonne/mm³",
+      "label": "ρ (Density)",
+      "display_value": "1.30 g/cm³"
+    },
+    "tensileStrength": {
+      "value": 75,
+      "unit": "MPa",
+      "label": "σₜ (Tensile Strength)"
+    },
+    "compressiveStrength": {
+      "value": 140,
+      "unit": "MPa",
+      "label": "σc (Compressive Strength)"
+    },
+    "shearStrength": {
+      "value": 80,
+      "unit": "MPa",
+      "label": "τ (Shear Strength)"
+    },
+    "elongationAtBreak": {
+      "value": 4.5,
+      "unit": "%",
+      "label": "ε (Elongation at Break)"
+    }
+  },
+  "thermal": {
+    "Tg_uncured": {
+      "value": 268,
+      "unit": "K",
+      "label": "Tg0 (Glass Transition at α=0)",
+      "display_value": "-5°C (268 K)",
+      "notes": "Linear dependence of Tg on degree of cure assumed"
+    },
+    "Tg_variation": {
+      "value": 220,
+      "unit": "K",
+      "label": "αTg (Variation of Tg with α=0)",
+      "notes": "Variation of glass transition temperature with degree of cure"
+    },
+    "T_Cla": {
+      "value": -45.7,
+      "unit": "K",
+      "label": "TCla (Lower Critical Value for T* at 0 K)",
+      "notes": "Prior to TC0, Er = Er0"
+    },
+    "T_Clb": {
+      "value": 0.0,
+      "unit": "",
+      "label": "TClb (Variation of Lower Critical Value)",
+      "notes": "Accounts for variation in slope of dEr/dT* curve"
+    },
+    "T_C2": {
+      "value": -12,
+      "unit": "K",
+      "label": "TC2 (Upper Critical Value for T*)",
+      "notes": "After TC2, Er = Er∞"
+    },
+    "T0": {
+      "value": 20,
+      "unit": "°C",
+      "label": "T0 (Zero Point Temperature)",
+      "notes": "For calculation of secondary variation of Er with temperature"
+    },
+    "a_Er": {
+      "value": 0,
+      "unit": "",
+      "label": "aEr (Relative Secondary Variation)",
+      "notes": "Relative secondary variation of Er with temperature"
+    },
+    "alpha": {
+      "value": 6.5e-5,
+      "unit": "1/°C",
+      "label": "α (CTE)",
+      "display_value": "65 × 10⁻⁶ /°C"
+    },
+    "k": {
+      "value": 0.19,
+      "unit": "W/m·K",
+      "label": "k (Thermal Conductivity)"
+    },
+    "specificHeat": {
+      "value": 1100,
+      "unit": "J/kg·K",
+      "label": "cp (Specific Heat)"
+    }
+  },
+  "cure_kinetics": {
+    "activationEnergy": {
+      "value": 66.5,
+      "unit": "kJ/gmole",
+      "label": "ΔE (Activation Energy)",
+      "notes": "Calculated from slope of line of ln(dα/dt)i vs 1/T"
+    },
+    "preExponentialCoefficient": {
+      "value": 1.53e5,
+      "unit": "1/s",
+      "label": "A (Pre-exponential Cure Rate Coefficient)",
+      "notes": "Calculated from weighted least squares analysis"
+    },
+    "firstExponentialConstant": {
+      "value": 0.813,
+      "unit": "",
+      "label": "m (First Exponential Constant)",
+      "notes": "Calculated from weighted least squares analysis"
+    },
+    "secondExponentialConstant": {
+      "value": 2.74,
+      "unit": "",
+      "label": "n (Second Exponential Constant)",
+      "notes": "Calculated from weighted least squares analysis"
+    },
+    "diffusionConstant": {
+      "value": 43.1,
+      "unit": "",
+      "label": "C (Diffusion Constant)",
+      "notes": "Accounts for rate of shift from kinetics to diffusion control"
+    },
+    "criticalDegreeOfCure": {
+      "value": -1.684,
+      "unit": "",
+      "label": "αc0 (Critical Degree of Cure at T=0K)",
+      "notes": "Note that this parameter is invalid below 35°C since degree of cure cannot be negative"
+    },
+    "criticalDegreeVariation": {
+      "value": 5.475e-3,
+      "unit": "1/K",
+      "label": "αc1 (Constant for Increase in Critical Resin)",
+      "notes": "When α approaches αc at a given temperature, cure rate slows dramatically as reaction becomes diffusion-controlled"
+    }
+  },
+  "abaqus": {
+    "material_name": "EpoxyResin_8552",
+    "template": "*Material, name=EpoxyResin_8552\n*Elastic\n4620., 0.39\n*Density\n1.30e-09,\n*Expansion\n6.5e-05, 298.\n*Conductivity\n0.19, 298.\n*Specific Heat\n1.1e+09,",
+    "cure_kinetics_template": "** 8552 Cure Kinetics Parameters (Equation 6.13)\n** Activation Energy: 66.5 kJ/gmole\n** Pre-exponential coefficient: 1.53e5 /s\n** m = 0.813, n = 2.74\n** Diffusion constant C = 43.1\n** Critical degree of cure: αc = -1.684 + 5.475e-3*T",
+    "modulus_development_template": "** 8552 Resin Modulus Development Model (Equation 6.6)\n** Unrelaxed modulus: Er∞ = 4.67 GPa\n** Relaxed modulus: Er0 = 4.67 GPa\n** Glass transition (α=0): Tg0 = 268 K (-5°C)\n** Tg variation: αTg = 220 K\n** Critical temperatures: TCla = -45.7 K, TC2 = -12 K"
+  },
+  "processing": {
+    "storageTemp": {
+      "value": -18,
+      "unit": "°C",
+      "label": "Storage Temperature"
+    },
+    "outLife_21C": {
+      "value": 21,
+      "unit": "days",
+      "label": "Out-life @ 21°C"
+    },
+    "tackLife": {
+      "value": 30,
+      "unit": "days",
+      "label": "Tack Life"
+    }
+  },
+  "references": [
+    "Hexcel 8552 Product Data Sheet",
+    "Hexcel Prepreg Technology",
+    "Table 6.2: Parameters used in 8552 resin modulus development model (Equation 6.6)",
+    "Table 6.6: Parameters used in 8552 cure kinetics model (Equation 6.13)"
+  ],
+  "notes": "Designed for autoclave processing. Excellent damage tolerance and hot/wet performance. Cure kinetics and modulus development models available for process simulation."
+}

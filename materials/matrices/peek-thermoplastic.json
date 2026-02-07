@@ -1,0 +1,150 @@
+{
+  "id": "peek-thermoplastic",
+  "name": "PEEK (Polyetheretherketone)",
+  "type": "Matrix",
+  "manufacturer": "Victrex, Solvay",
+  "description": "High-performance semi-crystalline thermoplastic polymer for advanced composites. PEEK offers unique combination of high temperature capability, chemical resistance, and recyclability.",
+  "detailed_description": "PEEK (Polyetheretherketone) is a high-performance semi-crystalline thermoplastic that has revolutionized composite materials technology. As a member of the PAEK (polyaryletherketone) family, PEEK offers a unique combination of properties that challenge the traditional dominance of thermoset matrices in demanding applications.\n\n**Thermoplastic Advantages**: Unlike thermoset epoxies, PEEK can be repeatedly heated and reformed, enabling repair, recycling, and novel manufacturing approaches. The material can be welded, thermoformed, and consolidated through heat and pressure without chemical crosslinking. This provides significant advantages in manufacturing efficiency and end-of-life recyclability.\n\n**Temperature Performance**: With a melting temperature (Tm) of 343°C and glass transition temperature (Tg) of 143°C, PEEK maintains excellent mechanical properties at temperatures exceeding most thermoset resins. Continuous use temperature ratings up to 250°C make PEEK suitable for hot-section aerospace components and automotive under-hood applications.\n\n**Chemical and Environmental Resistance**: Virtually immune to all common solvents, acids, and bases. Excellent resistance to hydrolysis, making it suitable for long-term exposure to hot water and steam. Does not absorb significant moisture, eliminating hot/wet knockdown factors common in epoxy systems. Inherently flame resistant with low smoke generation.\n\n**Mechanical Properties**: Provides excellent toughness and impact resistance. Maintains ductility even at cryogenic temperatures. Superior fatigue resistance compared to thermoset matrices. Good wear and abrasion resistance.\n\n**Processing Considerations**: Requires high processing temperatures (380-400°C), necessitating specialized equipment. Higher material costs than epoxy systems (typically 10-20x). Limited by flow characteristics compared to low-viscosity thermosets.\n\n**Applications**: Aerospace primary structures (seeking FAA certification), automotive components (replacing metals), oil and gas downhole tools, medical implants (biocompatible), industrial bearings and seals, semiconductor manufacturing equipment.\n\n**Sustainability**: Fully recyclable through mechanical grinding and re-melting. Scrap material can be reprocessed without property degradation. Longer service life reduces replacement frequency.",
+  "mechanical": {
+    "E": {
+      "value": 3600,
+      "unit": "MPa",
+      "label": "E (Young's Modulus)"
+    },
+    "v": {
+      "value": 0.40,
+      "unit": "",
+      "label": "ν (Poisson's Ratio)"
+    },
+    "G": {
+      "value": 1286,
+      "unit": "MPa",
+      "label": "G (Shear Modulus)",
+      "calculated": true
+    },
+    "density": {
+      "value": 1.32e-9,
+      "unit": "tonne/mm³",
+      "label": "ρ (Density)",
+      "display_value": "1.32 g/cm³"
+    },
+    "tensileStrength": {
+      "value": 100,
+      "unit": "MPa",
+      "label": "σₜ (Tensile Strength)"
+    },
+    "compressiveStrength": {
+      "value": 120,
+      "unit": "MPa",
+      "label": "σc (Compressive Strength)"
+    },
+    "shearStrength": {
+      "value": 60,
+      "unit": "MPa",
+      "label": "τ (Shear Strength)"
+    },
+    "elongationAtBreak": {
+      "value": 50,
+      "unit": "%",
+      "label": "ε (Elongation at Break)"
+    },
+    "flexuralModulus": {
+      "value": 3800,
+      "unit": "MPa",
+      "label": "Flexural Modulus"
+    }
+  },
+  "thermal": {
+    "alpha": {
+      "value": 4.7e-5,
+      "unit": "1/°C",
+      "label": "α (CTE)",
+      "display_value": "47 × 10⁻⁶ /°C"
+    },
+    "k": {
+      "value": 0.25,
+      "unit": "W/m·K",
+      "label": "k (Thermal Conductivity)"
+    },
+    "Tg": {
+      "value": 143,
+      "unit": "°C",
+      "label": "Tg (Glass Transition Temperature)"
+    },
+    "Tm": {
+      "value": 343,
+      "unit": "°C",
+      "label": "Tm (Melting Temperature)"
+    },
+    "specificHeat": {
+      "value": 1340,
+      "unit": "J/kg·K",
+      "label": "cp (Specific Heat)"
+    },
+    "deflectionTemp": {
+      "value": 160,
+      "unit": "°C",
+      "label": "Heat Deflection Temperature @ 1.8 MPa"
+    }
+  },
+  "rheological": {
+    "meltViscosity_380C": {
+      "value": 450,
+      "unit": "Pa·s",
+      "label": "η @ 380°C (Melt Viscosity)"
+    },
+    "meltViscosity_400C": {
+      "value": 200,
+      "unit": "Pa·s",
+      "label": "η @ 400°C (Melt Viscosity)"
+    },
+    "processingTemp": {
+      "value": 380,
+      "unit": "°C",
+      "label": "Processing Temperature"
+    },
+    "moldTemp": {
+      "value": 180,
+      "unit": "°C",
+      "label": "Mold Temperature"
+    }
+  },
+  "abaqus": {
+    "material_name": "PEEK_Thermoplastic",
+    "template": "*Material, name=PEEK_Thermoplastic\n*Elastic\n3600., 0.40\n*Density\n1.32e-09,\n*Expansion\n4.7e-05, 298.\n*Conductivity\n0.25, 298.\n*Specific Heat\n1.34e+09,"
+  },
+  "processing": {
+    "storageTemp": {
+      "value": 25,
+      "unit": "°C",
+      "label": "Storage Temperature"
+    },
+    "moistureAbsorption": {
+      "value": 0.5,
+      "unit": "%",
+      "label": "Moisture Absorption (24h @ 23°C)"
+    },
+    "dryingTemp": {
+      "value": 150,
+      "unit": "°C",
+      "label": "Drying Temperature"
+    },
+    "dryingTime": {
+      "value": 3,
+      "unit": "hours",
+      "label": "Drying Time"
+    }
+  },
+  "chemical_resistance": {
+    "acids": "Excellent",
+    "bases": "Excellent",
+    "organicSolvents": "Excellent",
+    "water": "Excellent",
+    "notes": "Resistant to most chemicals except concentrated sulfuric acid"
+  },
+  "references": [
+    "Victrex PEEK 450G Product Data",
+    "Solvay KetaSpire PEEK"
+  ],
+  "notes": "Excellent chemical resistance, high temperature capability. Suitable for automotive and aerospace applications. Recyclable and weldable."
+}

@@ -1,0 +1,120 @@
+{
+  "id": "glass-fiber-e-glass",
+  "name": "E-Glass Fiber",
+  "type": "Fiber",
+  "manufacturer": "Various",
+  "description": "Standard electrical-grade glass fiber, most common reinforcement in composites. E-Glass offers excellent cost-performance ratio and is widely used across industries.",
+  "detailed_description": "E-Glass (electrical glass) fiber is the most widely used reinforcement material in composite structures worldwide, accounting for over 90% of glass fiber production. Developed in the 1930s for electrical insulation, it has become the workhorse material for composite reinforcement due to its excellent balance of properties, cost-effectiveness, and versatility.\n\n**Material Composition**: E-Glass is composed primarily of silica (SiO₂) with additions of alumina, calcium oxide, and boron oxide. This composition provides good strength and stiffness while maintaining excellent electrical insulation properties and chemical resistance.\n\n**Mechanical Performance**: With a tensile strength of 3.45 GPa and elastic modulus of 72.5 GPa, E-Glass provides respectable mechanical properties at a fraction of the cost of carbon fiber. While it cannot match carbon fiber's stiffness, it offers excellent impact resistance and damage tolerance.\n\n**Cost-Effectiveness**: E-Glass typically costs 5-10 times less than carbon fiber, making it the material of choice for high-volume applications where cost is a primary concern. The well-established supply chain and manufacturing infrastructure ensure consistent availability.\n\n**Processing Versatility**: Available in numerous forms including continuous roving, chopped strands, woven fabrics, and mats. Compatible with all major resin systems including polyester, vinyl ester, and epoxy. Processes easily using hand layup, spray-up, filament winding, pultrusion, and resin transfer molding.\n\n**Industry Applications**: Wind turbine blades (largest application by volume), marine vessels and boats, automotive body panels, storage tanks and pipes, building panels and infrastructure, sporting goods, and electrical circuit boards.\n\n**Limitations**: Higher density than carbon fiber (2.58 vs 1.76 g/cm³) results in heavier structures. Lower stiffness may require thicker laminates. Susceptible to moisture absorption and alkali attack in certain environments.",
+  "mechanical": {
+    "E1": {
+      "value": 72500,
+      "unit": "MPa",
+      "label": "E₁ (Longitudinal Modulus)"
+    },
+    "E2": {
+      "value": 72500,
+      "unit": "MPa",
+      "label": "E₂ (Transverse Modulus)"
+    },
+    "E3": {
+      "value": 72500,
+      "unit": "MPa",
+      "label": "E₃ (Transverse Modulus)"
+    },
+    "G12": {
+      "value": 30000,
+      "unit": "MPa",
+      "label": "G₁₂ (Shear Modulus)"
+    },
+    "G13": {
+      "value": 30000,
+      "unit": "MPa",
+      "label": "G₁₃ (Shear Modulus)"
+    },
+    "G23": {
+      "value": 30000,
+      "unit": "MPa",
+      "label": "G₂₃ (Shear Modulus)"
+    },
+    "v12": {
+      "value": 0.22,
+      "unit": "",
+      "label": "ν₁₂ (Poisson's Ratio)"
+    },
+    "v13": {
+      "value": 0.22,
+      "unit": "",
+      "label": "ν₁₃ (Poisson's Ratio)"
+    },
+    "v23": {
+      "value": 0.22,
+      "unit": "",
+      "label": "ν₂₃ (Poisson's Ratio)"
+    },
+    "density": {
+      "value": 2.58e-9,
+      "unit": "tonne/mm³",
+      "label": "ρ (Density)",
+      "display_value": "2.58 g/cm³"
+    },
+    "tensileStrength": {
+      "value": 3450,
+      "unit": "MPa",
+      "label": "σₜ (Tensile Strength)"
+    },
+    "compressiveStrength": {
+      "value": 1450,
+      "unit": "MPa",
+      "label": "σc (Compressive Strength)"
+    }
+  },
+  "thermal": {
+    "alpha1": {
+      "value": 5.0e-6,
+      "unit": "1/°C",
+      "label": "α₁ (CTE)",
+      "display_value": "5.0 × 10⁻⁶ /°C"
+    },
+    "alpha2": {
+      "value": 5.0e-6,
+      "unit": "1/°C",
+      "label": "α₂ (CTE)",
+      "display_value": "5.0 × 10⁻⁶ /°C"
+    },
+    "alpha3": {
+      "value": 5.0e-6,
+      "unit": "1/°C",
+      "label": "α₃ (CTE)",
+      "display_value": "5.0 × 10⁻⁶ /°C"
+    },
+    "k1": {
+      "value": 1.3,
+      "unit": "W/m·K",
+      "label": "k₁ (Thermal Conductivity)"
+    },
+    "k2": {
+      "value": 1.3,
+      "unit": "W/m·K",
+      "label": "k₂ (Thermal Conductivity)"
+    },
+    "k3": {
+      "value": 1.3,
+      "unit": "W/m·K",
+      "label": "k₃ (Thermal Conductivity)"
+    },
+    "specificHeat": {
+      "value": 810,
+      "unit": "J/kg·K",
+      "label": "cp (Specific Heat)"
+    }
+  },
+  "abaqus": {
+    "material_name": "GlassFiber_EGlass",
+    "template": "*Material, name=GlassFiber_EGlass\n*Elastic, type=ISOTROPIC\n72500., 0.22\n*Density\n2.58e-09,\n*Expansion\n5.0e-06, 298.\n*Conductivity\n1.3, 298.\n*Specific Heat\n8.1e+08,"
+  },
+  "references": [
+    "Owens Corning Technical Data",
+    "PPG Fiber Glass Product Guide"
+  ],
+  "notes": "Isotropic material properties. Cost-effective alternative to carbon fiber."
+}

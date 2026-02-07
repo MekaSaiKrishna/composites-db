@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Material Details - CompositeLab</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../material-detail.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <header>
+        <div class="container">
+            <h1 class="logo">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">CompositeLab</a>
+            </h1>
+            <nav>
+                <a href="../index.html#fibers">Fiber Materials</a>
+                <a href="../index.html#matrices">Matrix Materials</a>
+                <a href="../index.html#about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb">
+            <a href="../index.html">Home</a>
+            <span class="separator">›</span>
+            <span id="breadcrumb-type">Materials</span>
+            <span class="separator">›</span>
+            <span id="breadcrumb-name">Loading...</span>
+        </div>
+
+        <!-- Material Header -->
+        <section class="material-header">
+            <div class="header-content">
+                <h1 id="material-name">Loading Material...</h1>
+                <div class="material-meta">
+                    <span class="material-type-badge" id="material-type">Type</span>
+                    <span class="manufacturer" id="manufacturer">Manufacturer</span>
+                </div>
+                <p class="material-description" id="description">Loading description...</p>
+            </div>
+        </section>
+
+        <!-- Detailed Description Section -->
+        <section class="detailed-description-section" id="detailed-description-section" style="display: none;">
+            <h2>About This Material</h2>
+            <div class="description-content" id="detailed-description"></div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+            <button class="action-btn primary" onclick="copyAllAbaqus()">
+                📋 Copy ABAQUS Code
+            </button>
+            <button class="action-btn secondary" onclick="exportMaterialJSON()">
+                💾 Export JSON
+            </button>
+            <button class="action-btn secondary" onclick="printDatasheet()">
+                🖨️ Print Datasheet
+            </button>
+        </section>
+
+        <!-- Property Sections -->
+        <div class="detail-grid">
+            
+            <!-- Mechanical Properties -->
+            <section class="property-card" id="mechanical-section">
+                <h2>Mechanical Properties</h2>
+                <div class="property-table" id="mechanical-properties">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Thermal Properties -->
+            <section class="property-card" id="thermal-section">
+                <h2>Thermal Properties</h2>
+                <div class="property-table" id="thermal-properties">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Rheological Properties (if applicable) -->
+            <section class="property-card" id="rheological-section" style="display: none;">
+                <h2>Rheological Properties</h2>
+                <div class="property-table" id="rheological-properties">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Processing Parameters (if applicable) -->
+            <section class="property-card" id="processing-section" style="display: none;">
+                <h2>Processing Parameters</h2>
+                <div class="property-table" id="processing-properties">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Visualization Section -->
+        <section class="visualization-section">
+            <h2>Material Property Visualizations</h2>
+            <p class="placeholder-text">📊 Plots and visualizations will be added here</p>
+            <div class="plots-grid">
+                <div class="plot-placeholder">
+                    <h3>Stress-Strain Curve</h3>
+                    <div class="plot-area">
+                        <p>Plot area for stress-strain behavior</p>
+                    </div>
+                </div>
+                <div class="plot-placeholder">
+                    <h3>Temperature Dependency</h3>
+                    <div class="plot-area">
+                        <p>Plot area for temperature-dependent properties</p>
+                    </div>
+                </div>
+                <div class="plot-placeholder">
+                    <h3>Property Comparison</h3>
+                    <div class="plot-area">
+                        <p>Plot area for comparative analysis</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABAQUS Code Section -->
+        <section class="abaqus-code-section">
+            <h2>ABAQUS Material Definition</h2>
+            <div class="code-container">
+                <button class="copy-code-btn" onclick="copyAbaqusCode()">📋 Copy Code</button>
+                <pre id="abaqus-code"><code>Loading...</code></pre>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section class="references-section" id="references-section" style="display: none;">
+            <h2>References & Documentation</h2>
+            <ul id="references-list">
+                <!-- Populated by JavaScript -->
+            </ul>
+        </section>
+
+        <!-- Notes Section -->
+        <section class="notes-section" id="notes-section" style="display: none;">
+            <h2>Additional Notes</h2>
+            <p id="notes-content"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Composite Materials Research Group | Built for Advanced FEA Applications</p>
+        </div>
+    </footer>
+
+    <script src="../material-detail.js"></script>
+</body>
+</html>

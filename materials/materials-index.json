@@ -1,0 +1,63 @@
+{
+  "catalog_version": "1.0",
+  "last_updated": "2024-02-06",
+  "materials": {
+    "fibers": [
+      {
+        "id": "carbon-fiber-t300",
+        "name": "Carbon Fiber T300",
+        "manufacturer": "Toray",
+        "file": "materials/fibers/carbon-fiber-t300.json",
+        "category": "Carbon Fiber",
+        "subcategory": "Standard Modulus"
+      },
+      {
+        "id": "carbon-fiber-t700",
+        "name": "Carbon Fiber T700",
+        "manufacturer": "Toray",
+        "file": "materials/fibers/carbon-fiber-t700.json",
+        "category": "Carbon Fiber",
+        "subcategory": "High Strength"
+      },
+      {
+        "id": "glass-fiber-e-glass",
+        "name": "E-Glass Fiber",
+        "manufacturer": "Various",
+        "file": "materials/fibers/glass-fiber-e-glass.json",
+        "category": "Glass Fiber",
+        "subcategory": "E-Glass"
+      }
+    ],
+    "matrices": [
+      {
+        "id": "epoxy-resin-8552",
+        "name": "Epoxy Resin 8552",
+        "manufacturer": "Hexcel",
+        "file": "materials/matrices/epoxy-resin-8552-extended.json",
+        "category": "Epoxy",
+        "subcategory": "Toughened"
+      },
+      {
+        "id": "epoxy-resin-977-3",
+        "name": "Epoxy Resin 977-3",
+        "manufacturer": "Cytec (Solvay)",
+        "file": "materials/matrices/epoxy-resin-977-3.json",
+        "category": "Epoxy",
+        "subcategory": "Toughened"
+      },
+      {
+        "id": "peek-thermoplastic",
+        "name": "PEEK (Polyetheretherketone)",
+        "manufacturer": "Victrex, Solvay",
+        "file": "materials/matrices/peek-thermoplastic.json",
+        "category": "Thermoplastic",
+        "subcategory": "PAEK Family"
+      }
+    ]
+  },
+  "statistics": {
+    "total_materials": 6,
+    "fiber_materials": 3,
+    "matrix_materials": 3
+  }
+}

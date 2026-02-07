@@ -1,0 +1,120 @@
+{
+  "id": "carbon-fiber-t700",
+  "name": "Carbon Fiber T700",
+  "type": "Fiber",
+  "manufacturer": "Toray",
+  "description": "High-strength intermediate modulus carbon fiber for advanced composites. T700 offers superior tensile strength compared to T300 while maintaining excellent processability.",
+  "detailed_description": "Toray T700S carbon fiber represents a significant advancement over the T300 series, offering approximately 40% higher tensile strength while maintaining similar processing characteristics. This PAN-based carbon fiber has become a preferred choice for high-performance aerospace and automotive applications where weight savings and structural efficiency are paramount.\n\n**Enhanced Strength Characteristics**: With a tensile strength of 4.9 GPa, T700S provides exceptional load-carrying capability. The fiber maintains the same elastic modulus as T300 (230 GPa), but the higher strength allows for more efficient structural designs with reduced material usage.\n\n**Aerospace Heritage**: T700S was developed specifically for primary aircraft structures and has been extensively qualified for commercial and military aerospace applications. Its consistent quality and well-documented properties make it ideal for safety-critical applications.\n\n**Processing Advantages**: The fiber exhibits excellent handleability during composite fabrication. It maintains good drapability for complex geometries while providing sufficient rigidity for automated processes. Surface treatment ensures reliable bonding with epoxy and other resin systems.\n\n**Weight Efficiency**: The high strength-to-weight ratio makes T700S particularly valuable in applications where every gram matters. In aerospace structures, switching from T300 to T700S can yield 15-20% weight savings while maintaining structural performance.\n\n**Application Examples**: Boeing 787 Dreamliner (wing structures), Airbus A350 (fuselage panels), high-performance automotive components, premium sporting goods, and industrial applications requiring maximum strength-to-weight ratio.",
+  "mechanical": {
+    "E1": {
+      "value": 230000,
+      "unit": "MPa",
+      "label": "E₁ (Longitudinal Modulus)"
+    },
+    "E2": {
+      "value": 15000,
+      "unit": "MPa",
+      "label": "E₂ (Transverse Modulus)"
+    },
+    "E3": {
+      "value": 15000,
+      "unit": "MPa",
+      "label": "E₃ (Transverse Modulus)"
+    },
+    "G12": {
+      "value": 27000,
+      "unit": "MPa",
+      "label": "G₁₂ (Shear Modulus)"
+    },
+    "G13": {
+      "value": 27000,
+      "unit": "MPa",
+      "label": "G₁₃ (Shear Modulus)"
+    },
+    "G23": {
+      "value": 7000,
+      "unit": "MPa",
+      "label": "G₂₃ (Shear Modulus)"
+    },
+    "v12": {
+      "value": 0.20,
+      "unit": "",
+      "label": "ν₁₂ (Poisson's Ratio)"
+    },
+    "v13": {
+      "value": 0.20,
+      "unit": "",
+      "label": "ν₁₃ (Poisson's Ratio)"
+    },
+    "v23": {
+      "value": 0.25,
+      "unit": "",
+      "label": "ν₂₃ (Poisson's Ratio)"
+    },
+    "density": {
+      "value": 1.80e-9,
+      "unit": "tonne/mm³",
+      "label": "ρ (Density)",
+      "display_value": "1.80 g/cm³"
+    },
+    "tensileStrength": {
+      "value": 4900,
+      "unit": "MPa",
+      "label": "σₜ (Tensile Strength)"
+    },
+    "compressiveStrength": {
+      "value": 3100,
+      "unit": "MPa",
+      "label": "σc (Compressive Strength)"
+    }
+  },
+  "thermal": {
+    "alpha1": {
+      "value": -5.0e-7,
+      "unit": "1/°C",
+      "label": "α₁ (CTE Longitudinal)",
+      "display_value": "-0.50 × 10⁻⁶ /°C"
+    },
+    "alpha2": {
+      "value": 1.0e-5,
+      "unit": "1/°C",
+      "label": "α₂ (CTE Transverse)",
+      "display_value": "10.0 × 10⁻⁶ /°C"
+    },
+    "alpha3": {
+      "value": 1.0e-5,
+      "unit": "1/°C",
+      "label": "α₃ (CTE Transverse)",
+      "display_value": "10.0 × 10⁻⁶ /°C"
+    },
+    "k1": {
+      "value": 9.0,
+      "unit": "W/m·K",
+      "label": "k₁ (Thermal Conductivity Longitudinal)"
+    },
+    "k2": {
+      "value": 0.6,
+      "unit": "W/m·K",
+      "label": "k₂ (Thermal Conductivity Transverse)"
+    },
+    "k3": {
+      "value": 0.6,
+      "unit": "W/m·K",
+      "label": "k₃ (Thermal Conductivity Transverse)"
+    },
+    "specificHeat": {
+      "value": 710,
+      "unit": "J/kg·K",
+      "label": "cp (Specific Heat)"
+    }
+  },
+  "abaqus": {
+    "material_name": "CarbonFiber_T700",
+    "template": "*Material, name=CarbonFiber_T700\n*Elastic, type=ENGINEERING CONSTANTS\n230000., 15000., 15000., 0.20, 0.25, 0.25, 27000., 7000.\n7000., 298.\n*Density\n1.80e-09,\n*Expansion, type=ORTHO\n-5.0e-07, 1.0e-05, 1.0e-05, 298.\n*Conductivity, type=ORTHO\n9.0, 0.6, 0.6, 298.\n*Specific Heat\n7.1e+08,"
+  },
+  "references": [
+    "Toray Carbon Fibers America, Inc. Technical Data Sheet T700S",
+    "Hexcel Product Data"
+  ],
+  "notes": "Higher strength than T300. Excellent for aerospace and automotive applications."
+}

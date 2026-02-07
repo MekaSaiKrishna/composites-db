@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composite Materials Database</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <header>
+        <div class="container">
+            <h1 class="logo">CompositeLab</h1>
+            <nav>
+                <a href="#fibers">Fiber Materials</a>
+                <a href="#matrices">Matrix Materials</a>
+                <a href="#about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Advanced Composite Materials Database</h2>
+            <p>Interactive material property cards for FEA and ABAQUS simulations</p>
+        </section>
+
+        <section id="fibers" class="materials-section">
+            <h3>Fiber Materials</h3>
+            <div class="materials-grid">
+                <!-- Materials loaded dynamically from JSON files -->
+                <div class="loading-spinner">Loading materials...</div>
+            </div>
+        </section>
+
+        <section id="matrices" class="materials-section">
+            <h3>Matrix Materials</h3>
+            <div class="materials-grid">
+                <!-- Materials loaded dynamically from JSON files -->
+                <div class="loading-spinner">Loading materials...</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Composite Materials Research Group | Built for Advanced FEA Applications</p>
+        </div>
+    </footer>
+
+    <script src="material-loader.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

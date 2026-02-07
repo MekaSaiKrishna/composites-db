@@ -1,0 +1,143 @@
+{
+  "id": "epoxy-resin-977-3",
+  "name": "Epoxy Resin 977-3",
+  "type": "Matrix",
+  "manufacturer": "Cytec (Solvay)",
+  "description": "High-performance toughened epoxy for advanced composites, developed for F-35. Offers exceptional hot/wet performance and damage tolerance for military aircraft applications.",
+  "detailed_description": "Cytec (now Solvay) 977-3 represents the pinnacle of toughened epoxy technology for aerospace applications. Originally developed for the F-35 Lightning II Joint Strike Fighter program, this resin system sets new standards for high-temperature performance, damage tolerance, and long-term durability in demanding military aircraft environments.\n\n**F-35 Heritage**: Selected as the primary matrix system for F-35 structural composites after extensive competition and testing. The resin demonstrated superior performance in hot/wet conditions, impact resistance, and long-term environmental durability compared to competing systems.\n\n**Exceptional Hot/Wet Capability**: With a glass transition temperature of 200°C, 977-3 provides industry-leading elevated temperature performance. Retains excellent mechanical properties after extended exposure to hot/wet conditions (82°C/95% RH). This capability enables composite primary structures in high-temperature zones previously limited to metallic materials.\n\n**Advanced Damage Tolerance**: Incorporates state-of-the-art toughening technology providing exceptional resistance to impact damage and crack propagation. Compression strength after impact (CAI) values exceed earlier generation toughened epoxies by 15-20%, enabling lighter weight designs.\n\n**Processing and Manufacturing**: Compatible with standard autoclave cure cycles and out-of-autoclave (OOA) processing. Extended out-life (30 days at 21°C) provides manufacturing flexibility. Good tack and drape characteristics facilitate complex part fabrication.\n\n**Military and Aerospace Applications**: F-35 airframe structures, advanced military aircraft, unmanned aerial vehicles (UAVs), missile structures, space applications, and other programs requiring maximum performance and reliability.\n\n**Technical Advantages**: Lower moisture absorption than competing systems, excellent resistance to micro-cracking, proven long-term durability in marine environments, and extensive qualification data available.",
+  "mechanical": {
+    "E": {
+      "value": 4200,
+      "unit": "MPa",
+      "label": "E (Young's Modulus)"
+    },
+    "v": {
+      "value": 0.35,
+      "unit": "",
+      "label": "ν (Poisson's Ratio)"
+    },
+    "G": {
+      "value": 1556,
+      "unit": "MPa",
+      "label": "G (Shear Modulus)",
+      "calculated": true
+    },
+    "density": {
+      "value": 1.27e-9,
+      "unit": "tonne/mm³",
+      "label": "ρ (Density)",
+      "display_value": "1.27 g/cm³"
+    },
+    "tensileStrength": {
+      "value": 85,
+      "unit": "MPa",
+      "label": "σₜ (Tensile Strength)"
+    },
+    "compressiveStrength": {
+      "value": 150,
+      "unit": "MPa",
+      "label": "σc (Compressive Strength)"
+    },
+    "shearStrength": {
+      "value": 85,
+      "unit": "MPa",
+      "label": "τ (Shear Strength)"
+    },
+    "elongationAtBreak": {
+      "value": 5.0,
+      "unit": "%",
+      "label": "ε (Elongation at Break)"
+    }
+  },
+  "thermal": {
+    "alpha": {
+      "value": 6.3e-5,
+      "unit": "1/°C",
+      "label": "α (CTE)",
+      "display_value": "63 × 10⁻⁶ /°C"
+    },
+    "k": {
+      "value": 0.21,
+      "unit": "W/m·K",
+      "label": "k (Thermal Conductivity)"
+    },
+    "Tg": {
+      "value": 200,
+      "unit": "°C",
+      "label": "Tg (Glass Transition Temperature)"
+    },
+    "specificHeat": {
+      "value": 1150,
+      "unit": "J/kg·K",
+      "label": "cp (Specific Heat)"
+    }
+  },
+  "rheological": {
+    "viscosity_25C": {
+      "value": 12000,
+      "unit": "mPa·s",
+      "label": "η @ 25°C (Viscosity)"
+    },
+    "viscosity_80C": {
+      "value": 120,
+      "unit": "mPa·s",
+      "label": "η @ 80°C (Viscosity)"
+    },
+    "viscosity_110C": {
+      "value": 20,
+      "unit": "mPa·s",
+      "label": "η @ 110°C (Viscosity)"
+    },
+    "gelTime_110C": {
+      "value": 55,
+      "unit": "min",
+      "label": "Gel Time @ 110°C"
+    },
+    "cureTemp": {
+      "value": 177,
+      "unit": "°C",
+      "label": "Cure Temperature"
+    },
+    "cureTime": {
+      "value": 120,
+      "unit": "min",
+      "label": "Cure Time"
+    },
+    "postCureTemp": {
+      "value": 205,
+      "unit": "°C",
+      "label": "Post-Cure Temperature"
+    },
+    "postCureTime": {
+      "value": 180,
+      "unit": "min",
+      "label": "Post-Cure Time"
+    }
+  },
+  "abaqus": {
+    "material_name": "EpoxyResin_977_3",
+    "template": "*Material, name=EpoxyResin_977_3\n*Elastic\n4200., 0.35\n*Density\n1.27e-09,\n*Expansion\n6.3e-05, 298.\n*Conductivity\n0.21, 298.\n*Specific Heat\n1.15e+09,"
+  },
+  "processing": {
+    "storageTemp": {
+      "value": -18,
+      "unit": "°C",
+      "label": "Storage Temperature"
+    },
+    "outLife_21C": {
+      "value": 30,
+      "unit": "days",
+      "label": "Out-life @ 21°C"
+    },
+    "tackLife": {
+      "value": 45,
+      "unit": "days",
+      "label": "Tack Life"
+    }
+  },
+  "references": [
+    "Cytec CYCOM 977-3 Epoxy Resin System",
+    "Solvay Advanced Composites"
+  ],
+  "notes": "Superior hot/wet performance. Qualified for F-35 and other military aircraft."
+}

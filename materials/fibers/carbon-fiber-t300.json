@@ -1,0 +1,120 @@
+{
+  "id": "carbon-fiber-t300",
+  "name": "Carbon Fiber T300",
+  "type": "Fiber",
+  "manufacturer": "Toray",
+  "description": "High-strength carbon fiber widely used in aerospace applications. T300 is a standard modulus carbon fiber that offers an excellent balance of mechanical properties, cost, and processability. It is the most commonly used carbon fiber in the aerospace industry and serves as a benchmark for composite material development.",
+  "detailed_description": "Toray T300 carbon fiber is a PAN-based (polyacrylonitrile) continuous fiber with a standard modulus and high tensile strength. The fiber has been the industry standard since its introduction in the 1970s and continues to be widely specified for both aerospace and industrial applications.\n\nKey characteristics include:\n\n**Structural Performance**: The fiber exhibits excellent tensile strength (3.53 GPa) combined with a moderate elastic modulus (230 GPa), making it ideal for applications where high strength-to-weight ratio is critical. The longitudinal stiffness provides excellent load-bearing capability along the fiber direction.\n\n**Thermal Behavior**: T300 demonstrates a slightly negative coefficient of thermal expansion in the fiber direction (-0.41 × 10⁻⁶ /°C), which can be advantageous in dimensional stability applications. The transverse CTE is positive (10.1 × 10⁻⁶ /°C), typical for carbon fibers.\n\n**Manufacturing Compatibility**: The fiber's surface treatment ensures good adhesion with epoxy, vinyl ester, and other thermoset resin systems. It is available in various tow sizes (1K, 3K, 6K, 12K) to accommodate different manufacturing processes including hand layup, filament winding, pultrusion, and automated fiber placement.\n\n**Applications**: Commonly used in aircraft primary and secondary structures, sporting goods (golf clubs, fishing rods, bicycles), automotive components, wind turbine blades, and pressure vessels. The fiber's consistent quality and well-established database make it a safe choice for certified aerospace applications.",
+  "mechanical": {
+    "E1": {
+      "value": 230000,
+      "unit": "MPa",
+      "label": "E₁ (Longitudinal Modulus)"
+    },
+    "E2": {
+      "value": 15000,
+      "unit": "MPa",
+      "label": "E₂ (Transverse Modulus)"
+    },
+    "E3": {
+      "value": 15000,
+      "unit": "MPa",
+      "label": "E₃ (Transverse Modulus)"
+    },
+    "G12": {
+      "value": 27000,
+      "unit": "MPa",
+      "label": "G₁₂ (Shear Modulus)"
+    },
+    "G13": {
+      "value": 27000,
+      "unit": "MPa",
+      "label": "G₁₃ (Shear Modulus)"
+    },
+    "G23": {
+      "value": 7000,
+      "unit": "MPa",
+      "label": "G₂₃ (Shear Modulus)"
+    },
+    "v12": {
+      "value": 0.20,
+      "unit": "",
+      "label": "ν₁₂ (Poisson's Ratio)"
+    },
+    "v13": {
+      "value": 0.20,
+      "unit": "",
+      "label": "ν₁₃ (Poisson's Ratio)"
+    },
+    "v23": {
+      "value": 0.25,
+      "unit": "",
+      "label": "ν₂₃ (Poisson's Ratio)"
+    },
+    "density": {
+      "value": 1.76e-9,
+      "unit": "tonne/mm³",
+      "label": "ρ (Density)",
+      "display_value": "1.76 g/cm³"
+    },
+    "tensileStrength": {
+      "value": 3530,
+      "unit": "MPa",
+      "label": "σₜ (Tensile Strength)"
+    },
+    "compressiveStrength": {
+      "value": 2500,
+      "unit": "MPa",
+      "label": "σc (Compressive Strength)"
+    }
+  },
+  "thermal": {
+    "alpha1": {
+      "value": -4.1e-7,
+      "unit": "1/°C",
+      "label": "α₁ (CTE Longitudinal)",
+      "display_value": "-0.41 × 10⁻⁶ /°C"
+    },
+    "alpha2": {
+      "value": 1.01e-5,
+      "unit": "1/°C",
+      "label": "α₂ (CTE Transverse)",
+      "display_value": "10.1 × 10⁻⁶ /°C"
+    },
+    "alpha3": {
+      "value": 1.01e-5,
+      "unit": "1/°C",
+      "label": "α₃ (CTE Transverse)",
+      "display_value": "10.1 × 10⁻⁶ /°C"
+    },
+    "k1": {
+      "value": 8.5,
+      "unit": "W/m·K",
+      "label": "k₁ (Thermal Conductivity Longitudinal)"
+    },
+    "k2": {
+      "value": 0.5,
+      "unit": "W/m·K",
+      "label": "k₂ (Thermal Conductivity Transverse)"
+    },
+    "k3": {
+      "value": 0.5,
+      "unit": "W/m·K",
+      "label": "k₃ (Thermal Conductivity Transverse)"
+    },
+    "specificHeat": {
+      "value": 710,
+      "unit": "J/kg·K",
+      "label": "cp (Specific Heat)"
+    }
+  },
+  "abaqus": {
+    "material_name": "CarbonFiber_T300",
+    "template": "*Material, name=CarbonFiber_T300\n*Elastic, type=ENGINEERING CONSTANTS\n230000., 15000., 15000., 0.20, 0.25, 0.25, 27000., 7000.\n7000., 298.\n*Density\n1.76e-09,\n*Expansion, type=ORTHO\n-4.1e-07, 1.01e-05, 1.01e-05, 298.\n*Conductivity, type=ORTHO\n8.5, 0.5, 0.5, 298.\n*Specific Heat\n7.1e+08,"
+  },
+  "references": [
+    "Toray Carbon Fibers America, Inc. Technical Data Sheet",
+    "MIL-HDBK-17-1F, Composite Materials Handbook"
+  ],
+  "notes": "Standard modulus carbon fiber. Temperature-dependent properties available upon request."
+}

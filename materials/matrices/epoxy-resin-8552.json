@@ -1,0 +1,143 @@
+{
+  "id": "epoxy-resin-8552",
+  "name": "Epoxy Resin 8552",
+  "type": "Matrix",
+  "manufacturer": "Hexcel",
+  "description": "Toughened epoxy resin system for prepreg applications, aerospace grade. 8552 offers excellent damage tolerance and hot/wet performance for primary aircraft structures.",
+  "detailed_description": "Hexcel 8552 is a high-performance toughened epoxy matrix system specifically designed for aerospace prepreg applications. It represents a significant advancement in epoxy technology, offering exceptional damage tolerance while maintaining the high-temperature performance required for aircraft primary structures.\n\n**Toughening Technology**: The 8552 system incorporates advanced toughening agents that significantly improve resistance to impact damage and delamination. Interlaminar fracture toughness (GIc) is 2-3 times higher than earlier generation aerospace epoxies, resulting in better damage tolerance and longer service life.\n\n**Hot/Wet Performance**: Maintains excellent mechanical properties at elevated temperatures, even after moisture absorption. The glass transition temperature (Tg) of 190°C provides adequate margin for typical aircraft operating conditions. Retains over 70% of room temperature strength at 82°C wet conditions (FAA certification standard).\n\n**Processing Characteristics**: Designed for autoclave processing with standard aerospace cure cycles. Exhibits controlled viscosity during cure, enabling good fiber wet-out and minimal void content. The resin demonstrates excellent tack and drape for hand layup operations while maintaining sufficient shelf life for manufacturing flexibility.\n\n**Qualification Status**: Widely qualified by major aerospace OEMs including Boeing, Airbus, Lockheed Martin, and Northrop Grumman. Extensive material property databases available for design and certification. Used in numerous certified aircraft programs.\n\n**Applications**: Aircraft primary structures (wing skins, spars, fuselage panels), helicopter rotor blades, aerospace tooling, satellite structures, and other applications requiring high reliability and damage tolerance.\n\n**Handling Requirements**: Requires freezer storage at -18°C. Out-life at room temperature is 21 days. Cured parts typically require post-cure at 190°C for 2 hours to develop full properties.",
+  "mechanical": {
+    "E": {
+      "value": 4620,
+      "unit": "MPa",
+      "label": "E (Young's Modulus)"
+    },
+    "v": {
+      "value": 0.39,
+      "unit": "",
+      "label": "ν (Poisson's Ratio)"
+    },
+    "G": {
+      "value": 1661,
+      "unit": "MPa",
+      "label": "G (Shear Modulus)",
+      "calculated": true
+    },
+    "density": {
+      "value": 1.30e-9,
+      "unit": "tonne/mm³",
+      "label": "ρ (Density)",
+      "display_value": "1.30 g/cm³"
+    },
+    "tensileStrength": {
+      "value": 75,
+      "unit": "MPa",
+      "label": "σₜ (Tensile Strength)"
+    },
+    "compressiveStrength": {
+      "value": 140,
+      "unit": "MPa",
+      "label": "σc (Compressive Strength)"
+    },
+    "shearStrength": {
+      "value": 80,
+      "unit": "MPa",
+      "label": "τ (Shear Strength)"
+    },
+    "elongationAtBreak": {
+      "value": 4.5,
+      "unit": "%",
+      "label": "ε (Elongation at Break)"
+    }
+  },
+  "thermal": {
+    "alpha": {
+      "value": 6.5e-5,
+      "unit": "1/°C",
+      "label": "α (CTE)",
+      "display_value": "65 × 10⁻⁶ /°C"
+    },
+    "k": {
+      "value": 0.19,
+      "unit": "W/m·K",
+      "label": "k (Thermal Conductivity)"
+    },
+    "Tg": {
+      "value": 190,
+      "unit": "°C",
+      "label": "Tg (Glass Transition Temperature)"
+    },
+    "specificHeat": {
+      "value": 1100,
+      "unit": "J/kg·K",
+      "label": "cp (Specific Heat)"
+    }
+  },
+  "rheological": {
+    "viscosity_25C": {
+      "value": 15000,
+      "unit": "mPa·s",
+      "label": "η @ 25°C (Viscosity)"
+    },
+    "viscosity_80C": {
+      "value": 150,
+      "unit": "mPa·s",
+      "label": "η @ 80°C (Viscosity)"
+    },
+    "viscosity_120C": {
+      "value": 15,
+      "unit": "mPa·s",
+      "label": "η @ 120°C (Viscosity)"
+    },
+    "gelTime_120C": {
+      "value": 45,
+      "unit": "min",
+      "label": "Gel Time @ 120°C"
+    },
+    "cureTemp": {
+      "value": 180,
+      "unit": "°C",
+      "label": "Cure Temperature"
+    },
+    "cureTime": {
+      "value": 120,
+      "unit": "min",
+      "label": "Cure Time"
+    },
+    "postCureTemp": {
+      "value": 190,
+      "unit": "°C",
+      "label": "Post-Cure Temperature"
+    },
+    "postCureTime": {
+      "value": 120,
+      "unit": "min",
+      "label": "Post-Cure Time"
+    }
+  },
+  "abaqus": {
+    "material_name": "EpoxyResin_8552",
+    "template": "*Material, name=EpoxyResin_8552\n*Elastic\n4620., 0.39\n*Density\n1.30e-09,\n*Expansion\n6.5e-05, 298.\n*Conductivity\n0.19, 298.\n*Specific Heat\n1.1e+09,"
+  },
+  "processing": {
+    "storageTemp": {
+      "value": -18,
+      "unit": "°C",
+      "label": "Storage Temperature"
+    },
+    "outLife_21C": {
+      "value": 21,
+      "unit": "days",
+      "label": "Out-life @ 21°C"
+    },
+    "tackLife": {
+      "value": 30,
+      "unit": "days",
+      "label": "Tack Life"
+    }
+  },
+  "references": [
+    "Hexcel 8552 Product Data Sheet",
+    "Hexcel Prepreg Technology"
+  ],
+  "notes": "Designed for autoclave processing. Excellent damage tolerance and hot/wet performance."
+}
