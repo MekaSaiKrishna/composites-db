@@ -121,6 +121,54 @@
 }
 
 
+/* Cure Kinetics Model Section */
+.model-section {
+    margin: 3rem 0;
+    padding: 3rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+}
+
+.model-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    border-bottom: 2px solid;
+    border-image: var(--primary-gradient) 1;
+    padding-bottom: 0.5rem;
+}
+
+.model-content {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+.model-content p {
+    margin-bottom: 1.5rem;
+}
+
+.model-content strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.model-content .katex-display {
+    margin: 2rem 0;
+    padding: 1.5rem 2rem;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    border-left: 3px solid;
+    border-image: var(--accent-gradient) 1;
+    overflow-x: auto;
+}
+
+.model-content .katex {
+    font-size: 1.15em;
+}
+
 /* Quick Actions */
 .quick-actions {
     display: flex;

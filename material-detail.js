@@ -74,6 +74,30 @@ function populatePage(material) {
         descContent.innerHTML = formattedDesc;
     }
     
+    // Populate cure kinetics model section if available
+    if (material.cure_kinetics_model) {
+        const modelSection = document.getElementById('cure-kinetics-model-section');
+        modelSection.style.display = 'block';
+
+        if (material.cure_kinetics_model.title) {
+            document.getElementById('cure-kinetics-model-title').textContent = material.cure_kinetics_model.title;
+        }
+
+        const modelContent = document.getElementById('cure-kinetics-model-content');
+        const formattedModel = material.cure_kinetics_model.content
+            .split('\n\n')
+            .map(para => {
+                para = para.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                return `<p>${para}</p>`;
+            })
+            .join('');
+
+        modelContent.innerHTML = formattedModel;
+
+        // Render LaTeX via KaTeX auto-render once it's loaded
+        renderMathInSection(modelContent);
+    }
+
     // Populate mechanical properties
     populatePropertySection('mechanical-properties', material.mechanical);
     
@@ -124,6 +148,24 @@ function populatePage(material) {
         document.getElementById('notes-section').style.display = 'block';
         document.getElementById('notes-content').textContent = material.notes;
     }
+}
+
+// Render LaTeX math in a DOM element using KaTeX auto-render
+function renderMathInSection(element) {
+    function tryRender() {
+        if (typeof renderMathInElement === 'function') {
+            renderMathInElement(element, {
+                delimiters: [
+                    { left: '$$', right: '$$', display: true },
+                    { left: '$', right: '$', display: false }
+                ],
+                throwOnError: false
+            });
+        } else {
+            setTimeout(tryRender, 100);
+        }
+    }
+    tryRender();
 }
 
 // Populate a property section
