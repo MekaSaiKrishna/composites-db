@@ -108,54 +108,6 @@
       "unit": "1/K",
       "label": "α_rubber (CTE)",
       "display_value": "18.2E-5 /K"
-    },
-    "k_00": {
-      "value": 0.148,
-      "unit": "W/m·K",
-      "label": "k_00",
-      "notes": "Thermal conductivity at phi=0 & T=273.15K"
-    },
-    "k_10": {
-      "value": 0.188,
-      "unit": "W/m·K",
-      "label": "k_10",
-      "notes": "Thermal conductivity at phi=1 & T=273.15K"
-    },
-    "k0_TEMP": {
-      "value": 0,
-      "unit": "W/m·K^2",
-      "label": "k0_TEMP",
-      "notes": "conductivity/T at phi=0"
-    },
-    "k1_TEMP": {
-      "value": 7E-4,
-      "unit": "W/m·K^2",
-      "label": "k1_TEMP",
-      "notes": "conductivity/T at phi=1"
-    },
-    "specificHeat_00": {
-      "value": 1.9E9,
-      "unit": "mJ/Mg·K",
-      "label": "cp_00",
-      "notes": "specific heat at phi=0 & T=273.15K"
-    },
-    "specificHeat_10": {
-      "value": 1.15E9,
-      "unit": "mJ/Mg·K",
-      "label": "cp_10",
-      "notes": "specific heat at phi=1 & T=273.15K"
-    },
-    "specificHeatPerT_0": {
-      "value": 27.7E5,
-      "unit": "mJ/Mg·K^2",
-      "label": "cp0_TEMP",
-      "notes": "specific heat per T at phi=0"
-    },
-    "specificHeatPerT_1": {
-      "value": 33.4E5,
-      "unit": "mJ/Mg·K^2",
-      "label": "cp1_TEMP",
-      "notes": "specific heat per T at phi=1"
     }
   },
   "cure_kinetics_model": {
