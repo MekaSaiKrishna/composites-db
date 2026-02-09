@@ -156,7 +156,7 @@
       "unit": "mJ/Mg·K^2",
       "label": "cp1_TEMP"
       "notes": "specific heat per T at phi=1"
-    },
+    }
   },
   "cure_kinetics_model": {
     "title": "Cure Kinetics Model",
