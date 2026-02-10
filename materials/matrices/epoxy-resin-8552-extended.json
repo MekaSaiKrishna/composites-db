@@ -163,6 +163,50 @@
       "notes": "When α approaches αc at a given temperature, cure rate slows dramatically as reaction becomes diffusion-controlled"
     }
   },
+  "viscosity_model": {
+    "eta_inf": {
+      "value": 2.29e-11,
+      "unit": "Pa·s",
+      "label": "η∞ (Pre-exponential Viscosity Factor)",
+      "notes": "Back-calculated from viscosity measurements at 80°C and 120°C"
+    },
+    "E_eta": {
+      "value": 66500,
+      "unit": "J/mol",
+      "label": "Eη (Viscosity Activation Energy)",
+      "notes": "Determined from Arrhenius fit of ln(η) vs 1/T"
+    },
+    "alpha_gel": {
+      "value": 0.47,
+      "unit": "",
+      "label": "αgel (Gel Point Degree of Cure)",
+      "notes": "Degree of cure at gelation; viscosity diverges as α approaches αgel"
+    },
+    "A_visc": {
+      "value": 1.5,
+      "unit": "",
+      "label": "A (Castro-Macosko Exponent Constant)",
+      "notes": "Power law constant in Castro-Macosko viscosity model"
+    },
+    "B_visc": {
+      "value": 4.0,
+      "unit": "",
+      "label": "B (Castro-Macosko Cure Dependence)",
+      "notes": "Power law cure dependence in Castro-Macosko viscosity model"
+    }
+  },
+  "plots": {
+    "cure_characteristics": {
+      "title": "Cure Characteristics",
+      "image": "images/materials/epoxy-resin-8552-cure-characteristics.png",
+      "description": "Degree of cure vs time at isothermal temperatures"
+    },
+    "viscosity_model": {
+      "title": "Viscosity Model",
+      "image": "images/materials/epoxy-resin-8552-viscosity-model.png",
+      "description": "Viscosity evolution during isothermal cure"
+    }
+  },
   "abaqus": {
     "material_name": "EpoxyResin_8552",
     "template": "*Material, name=EpoxyResin_8552\n*Elastic\n4620., 0.39\n*Density\n1.30e-09,\n*Expansion\n6.5e-05, 298.\n*Conductivity\n0.19, 298.\n*Specific Heat\n1.1e+09,",

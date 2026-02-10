@@ -122,6 +122,23 @@ function populatePage(material) {
         populatePropertySection('processing-properties', material.processing);
     }
 
+    // Populate visualization plots if available
+    if (material.plots) {
+        const vizSection = document.getElementById('visualization-section');
+        const plotsGrid = document.getElementById('plots-grid');
+        const plots = Object.values(material.plots);
+        if (plots.length > 0) {
+            vizSection.style.display = 'block';
+            plotsGrid.innerHTML = plots.map(plot => `
+                <div class="plot-card">
+                    <h3>${plot.title}</h3>
+                    <img src="../${plot.image}" alt="${plot.title}" loading="lazy">
+                    <p class="plot-description">${plot.description}</p>
+                </div>
+            `).join('');
+        }
+    }
+
     // Populate ABAQUS code (include all available templates)
     if (material.abaqus && material.abaqus.template) {
         let abaqusCode = material.abaqus.template;
